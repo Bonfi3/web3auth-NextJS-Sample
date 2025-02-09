@@ -3,8 +3,8 @@ import { Web3Auth } from "@web3auth/modal";
 import { CHAIN_NAMESPACES, IBaseProvider } from "@web3auth/base";
 import { SolanaPrivateKeyProvider } from "@web3auth/solana-provider";
 
-const clientId = process.env.WEB3AUTH_CLIENT_ID;
-if (!clientId) throw new Error("WEB3AUTH_CLIENT_ID is not defined in environment variables");
+const clientId = process.env.NEXT_PUBLIC_WEB3AUTH_CLIENT_ID;
+if (!clientId) throw new Error("NEXT_PUBLIC_WEB3AUTH_CLIENT_ID is not defined in environment variables");
 
 const web3auth = new Web3Auth({
   clientId,
